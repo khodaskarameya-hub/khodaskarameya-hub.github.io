@@ -1,0 +1,382 @@
+<!doctype html>
+<html lang="en" class="no-js">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Relay: prior authorization workspace case study | Ameya Khodaskar</title>
+<meta name="description" content="A self-initiated concept: a prior authorization workspace that shows clinic staff what a payer will ask for before they submit, ranks work by risk to the patient's appointment, and turns denials into a clear appeal path.">
+<meta name="author" content="Ameya Khodaskar">
+<meta name="theme-color" content="#d42a20">
+<link rel="canonical" href="https://khodaskarameya-hub.github.io/case-studies/relay-prior-authorization/">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Ameya Khodaskar">
+<meta property="og:title" content="Relay: prior authorization workspace | Ameya Khodaskar">
+<meta property="og:description" content="Service design and B2B UX for one of healthcare's most hated workflows.">
+<meta property="og:url" content="https://khodaskarameya-hub.github.io/case-studies/relay-prior-authorization/">
+<meta property="og:image" content="https://khodaskarameya-hub.github.io/assets/images/case-studies/relay/kv.webp">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="../../favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="../../apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Anybody:wdth,wght@50..150,500..900&amp;family=Archivo:wdth,wght@62..125,400..800&amp;family=Martian+Mono:wdth,wght@75..112.5,400..600&amp;family=Inter:wght@400;500;600;700&amp;display=swap">
+<link rel="stylesheet" href="../../assets/css/style.css">
+<link rel="stylesheet" href="../../assets/css/case.css">
+<script>document.documentElement.classList.replace('no-js', 'js');</script>
+</head>
+<body class="cs-page acc-blue">
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="topbar">
+  <div class="wrap">
+    <nav class="nav" aria-label="Primary">
+      <a class="brand" href="../../" aria-label="Ameya Khodaskar, home">
+        <span class="mono-mark" aria-hidden="true">AK</span>
+        <span class="brand-name">Ameya Khodaskar<small>UX Researcher &amp; Product Designer</small></span>
+      </a>
+      <ul class="nav-links">
+        <li><a href="../../#about">About</a></li>
+        <li><a href="../../#experience">Journey</a></li>
+        <li><a href="../../#projects">Case studies</a></li>
+        <li><a href="../../#skills">Skills</a></li>
+        <li><a href="../../#contact">Contact</a></li>
+      </ul>
+      <div class="nav-actions">
+        <button class="btn btn-sm grid-toggle" type="button" aria-pressed="false" title="Show the layout grid (shortcut: G)">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M9 3v18M15 3v18"/></svg>
+          <span>Grid</span>
+        </button>
+        <a class="btn btn-sm btn-lemon" href="https://www.linkedin.com/in/ameya-khodaskar-071bb1207" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM3 9.5h4V21H3zM9.5 9.5h3.8v1.6h.06c.53-1 1.83-2.06 3.77-2.06 4.03 0 4.77 2.65 4.77 6.1V21h-4v-5.1c0-1.22-.02-2.78-1.7-2.78-1.7 0-1.96 1.33-1.96 2.7V21h-4z"/></svg>
+          LinkedIn
+        </a>
+        <details class="menu">
+          <summary aria-label="Menu">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+            <span>Menu</span>
+          </summary>
+          <div class="menu-panel">
+            <a href="../../">Home <span>Top</span></a>
+            <a href="../../#about">About <span>Profile</span></a>
+            <a href="../../#experience">Journey <span>Role + study</span></a>
+            <a href="../../#projects">Case studies <span>Six studies</span></a>
+            <a href="../../#skills">Skills <span>Research / design</span></a>
+            <a href="../../#contact">Contact <span>Email + LinkedIn</span></a>
+          </div>
+        </details>
+      </div>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+
+<section class="x-hero" aria-labelledby="cs-title">
+  <div class="wrap">
+    <p class="x-crumbs label"><span class="dot" aria-hidden="true"></span><a href="../../#projects">Case studies</a><span aria-hidden="true">/</span><span>Healthcare operations</span></p>
+    <p class="x-kicker">B2B SaaS · Service design · Healthcare operations</p>
+    <h1 id="cs-title" class="x-title">Relay</h1>
+    <p class="x-sub">A prior authorization workspace that tells clinic staff what the payer will ask for, <em>before the payer asks</em>.</p>
+    <dl class="x-meta">
+      <div><dt>Type</dt><dd>Self-initiated concept</dd></div>
+      <div><dt>My role</dt><dd>Solo: research synthesis, service design, UX and UI</dd></div>
+      <div><dt>Platform</dt><dd>Desktop web app for clinic staff</dd></div>
+      <div><dt>Methods</dt><dd>Secondary research, service blueprint, assumption mapping, decision log</dd></div>
+    </dl>
+    <figure class="kv-hero"><img src="../../assets/images/case-studies/relay/kv.webp" width="2400" height="1500" alt="Relay key visual: the case detail screen and queue in perspective, with floating checklist and risk cards" fetchpriority="high"></figure>
+    <p class="x-flag"><b>Concept project</b><span>I didn't run primary research for this project. The problem is framed with published data (sources at the end), the workflow is modeled from public material, and the validation plan shows how I'd test it with real coordinators. Patients, payers, clinics and policies in the screens are fictional.</span></p>
+  </div>
+</section>
+
+<div class="wrap x-layout">
+  <nav class="x-toc" aria-label="On this page">
+    <p>On this page</p>
+    <ol>
+      <li><a href="#overview">Overview</a></li>
+      <li><a href="#problem">Problem</a></li>
+      <li><a href="#people">People</a></li>
+      <li><a href="#blueprint">Blueprint</a></li>
+      <li><a href="#assumptions">Assumptions</a></li>
+      <li><a href="#decisions">Decisions</a></li>
+      <li><a href="#design">Design</a></li>
+      <li><a href="#visual">Visual language</a></li>
+      <li><a href="#edges">Edge cases</a></li>
+      <li><a href="#validation">Validation plan</a></li>
+      <li><a href="#metrics">Metrics</a></li>
+      <li><a href="#reflection">Reflection</a></li>
+    </ol>
+  </nav>
+
+  <div class="x-main">
+
+    <section id="overview" class="blk" aria-labelledby="h-overview">
+      <p class="tag2">Overview</p>
+      <h2 id="h-overview" class="x-h">Long story short</h2>
+      <dl class="rows">
+        <div class="row"><dt>Context</dt><dd>Before many tests, procedures and drugs, a clinic has to get the patient's insurer to approve them. This is called <b>prior authorization</b>. Staff collect evidence from the chart, fill in payer forms or portals, and chase decisions by phone and fax.</dd></div>
+        <div class="row"><dt>Problem</dt><dd>Physicians report around <b>39 prior authorizations a week</b>, taking about <b>13 hours</b> of physician and staff time<sup class="ref"><a href="#src">1</a></sup>. Many requests come back asking for more information that was already in the chart, and the delay lands on the patient.</dd></div>
+        <div class="row"><dt>My role</dt><dd><ul><li>Framed the problem from published research and modeled the end-to-end workflow as a <b>service blueprint</b>.</li><li>Mapped the riskiest assumptions, wrote a <b>decision log</b> for the three biggest design choices, and designed the core screens.</li><li>Wrote a <b>validation plan</b> and success metrics so the concept can be tested, not just admired.</li></ul></dd></div>
+        <div class="row"><dt>Solution</dt><dd>A workspace that turns each payer's policy into a <b>readiness checklist</b>, matches evidence from the chart with its <b>source visible</b>, ranks the queue by <b>risk to the patient's appointment</b>, and turns a denial into a <b>plain-language appeal path</b>.</dd></div>
+        <div class="row"><dt>Deliverables</dt><dd>Service blueprint, assumption map, decision log, 3 high-fidelity screens, edge-case behavior, a validation plan and a metric framework.</dd></div>
+      </dl>
+    </section>
+
+    <section id="problem" class="blk" aria-labelledby="h-problem">
+      <p class="tag2">The problem</p>
+      <h2 id="h-problem" class="x-h">Paperwork that sits between a patient and their care</h2>
+      <p class="x-p">The American Medical Association surveys physicians about prior authorization every year. The 2024 survey of 1,000 physicians gives a sense of the scale<sup class="ref"><a href="#src">1</a></sup>:</p>
+      <div class="stats">
+        <div class="stat"><b>39</b><span>prior authorizations per physician, per week</span><small>AMA 2024 survey [1]</small></div>
+        <div class="stat"><b>13 h</b><span>of physician and staff time each week</span><small>AMA 2024 survey [1]</small></div>
+        <div class="stat"><b>40%</b><span>of physicians employ staff who work only on prior auth</span><small>AMA 2024 survey [1]</small></div>
+        <div class="stat"><b>29%</b><span>report it led to a serious adverse event for a patient</span><small>AMA 2024 survey [1]</small></div>
+      </div>
+      <p class="x-p" style="margin-top:28px">The rules are also changing. A 2024 federal rule requires certain payers (Medicare Advantage, Medicaid, CHIP and some marketplace plans) to give a <b>specific reason for every denial</b> and to decide within <b>72 hours for urgent</b> and <b>7 calendar days for standard</b> requests, mostly from 2026<sup class="ref"><a href="#src">2</a></sup>. More structured payer responses make it realistic to design tools around them.</p>
+      <p class="x-p">Where I chose to focus: the people who do this work every day are <b>prior authorization coordinators</b>, not physicians. Their tools today are the EHR, a different portal for each payer, fax, phone and spreadsheets. Nothing tells them, before they submit, whether a request is complete.</p>
+      <div class="hmw2"><p class="label">How might we</p><p>How might we help coordinators submit complete requests the first time, and always work first on the ones that put a patient's appointment at risk?</p></div>
+    </section>
+
+    <section id="people" class="blk" aria-labelledby="h-people">
+      <p class="tag2">People</p>
+      <h2 id="h-people" class="x-h">Four roles, one request</h2>
+      <p class="x-p">These are <b>assumption-based proto-personas</b>, built from the workflow rather than from interviews. Step one of the validation plan is to replace them with real ones.</p>
+      <div class="methods">
+        <div class="method"><b>01</b><span>PA coordinator · primary user</span><p>Owns the queue. Needs to know what's missing, whose move it is, and which case can't wait. Measured on approvals and on appointments that go ahead.</p></div>
+        <div class="method"><b>02</b><span>Ordering provider</span><p>Holds the clinical facts but is interrupted constantly. Needs specific, rare and answerable asks, not "please review chart."</p></div>
+        <div class="method"><b>03</b><span>Appeals specialist</span><p>Works the denials. Needs the real reason behind the payer's language, the deadline, and the evidence to cite.</p></div>
+        <div class="method"><b>04</b><span>Patient · affected, not a user</span><p>Experiences the delay as a cancelled scan or surgery. Needs timely, honest updates from the clinic.</p></div>
+      </div>
+    </section>
+
+    <section id="blueprint" class="blk" aria-labelledby="h-blueprint">
+      <p class="tag2">Service blueprint</p>
+      <h2 id="h-blueprint" class="x-h">Where a request actually breaks</h2>
+      <p class="x-p">I modeled one request from order to decision across everyone involved. The dashed line is the <b>line of visibility</b>: everything below it happens out of the coordinator's sight. That is where most of the waiting is.</p>
+      <div class="bp">
+        <table>
+          <thead><tr><th scope="col">Stage</th><th scope="col">1 · Order</th><th scope="col">2 · Is PA needed?</th><th scope="col">3 · Gather evidence</th><th scope="col">4 · Submit</th><th scope="col">5 · Payer review</th><th scope="col">6 · Decision</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">Coordinator</th><td>Sees new order in EHR work list</td><td>Checks payer rules, often from memory or a PDF</td><td>Searches notes, PT records, imaging, outside faxes</td><td>Re-types into payer portal or fax form</td><td>Calls or checks the portal for status</td><td>Updates EHR and tells the patient</td></tr>
+            <tr class="line"><th scope="row">Provider</th><td>Places order</td><td>None</td><td>Gets "please review chart" messages</td><td>Signs if needed</td><td>May be pulled into a peer-to-peer call</td><td>Reschedules if denied</td></tr>
+            <tr><th scope="row">Payer</th><td>None</td><td>Publishes policy criteria</td><td>None</td><td>Receives request</td><td>Reviews against criteria; may ask for more info</td><td>Approves, denies or pends</td></tr>
+            <tr><th scope="row">Systems</th><td>EHR</td><td>Payer website, PDFs</td><td>EHR, document scans</td><td>Payer portals, fax</td><td>Portal, phone</td><td>Portal, letter, fax</td></tr>
+            <tr><th scope="row">Pain point</th><td>None</td><td><span class="pain">Rules differ by payer and change</span></td><td><span class="pain">Evidence scattered, in vague wording</span></td><td><span class="pain">No completeness check before sending</span></td><td><span class="pain">"More info" requests add days</span></td><td><span class="pain">Denial language is unclear</span></td></tr>
+            <tr><th scope="row">Opportunity</th><td><span class="opp">Auto-create the request</span></td><td><span class="opp">Policy as a checklist</span></td><td><span class="opp">Suggest matches, with sources</span></td><td><span class="opp">Readiness gate</span></td><td><span class="opp">Rank by appointment risk</span></td><td><span class="opp">Plain-language appeal path</span></td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="x-cap">Scroll the blueprint sideways on small screens →</p>
+    </section>
+
+    <section id="assumptions" class="blk" aria-labelledby="h-assumptions">
+      <p class="tag2">Assumption map</p>
+      <h2 id="h-assumptions" class="x-h">What has to be true for this to work</h2>
+      <p class="x-p">Before designing screens, I listed what the concept depends on and sorted it by how damaging it would be if wrong, and by how much evidence I have. The highlighted quadrant, high risk with little evidence, is where research should start.</p>
+      <div class="amap">
+        <span class="ax ay">← Lower risk · Higher risk if wrong →</span>
+        <div class="grid">
+          <div class="q hot"><h5>High risk · little evidence · test first</h5><p>Payer criteria can be turned into a structured checklist per service and kept current.</p><p>Coordinators will trust evidence matched from the chart if they can see where it came from.</p><p>"Readiness" predicts which requests get "more info" replies.</p></div>
+          <div class="q"><h5>High risk · good evidence</h5><p>Time spent and denials are a real, recurring burden for clinics.<sup class="ref"><a href="#src">1</a></sup></p><p>Payers are moving toward specific denial reasons and fixed timeframes.<sup class="ref"><a href="#src">2</a></sup></p></div>
+          <div class="q"><h5>Lower risk · little evidence</h5><p>Coordinators prefer a ranked queue over sorting it themselves.</p><p>Providers answer specific asks faster than general ones.</p></div>
+          <div class="q"><h5>Lower risk · good evidence</h5><p>Clinic staff work in the EHR all day, so Relay must link to it, not replace it.</p></div>
+        </div>
+        <span></span>
+        <div class="axx ax"><span>Little evidence</span><span>Good evidence</span></div>
+      </div>
+    </section>
+
+    <section id="decisions" class="blk" aria-labelledby="h-decisions">
+      <p class="tag2">Decision log</p>
+      <h2 id="h-decisions" class="x-h">Three choices that shaped the product</h2>
+      <p class="x-p">For each choice I compared three directions and wrote down what I picked, why, and the trade-off I accepted. Trade-offs are what a team actually needs to debate.</p>
+      <div class="decide">
+        <article class="dec">
+          <div class="dec-h"><i>Decision 01</i><h4>What order should the queue be in?</h4></div>
+          <div class="dec-o">
+            <div class="no"><b>Date received</b>First in, first out. Fair and simple, but a request for a surgery tomorrow can sit behind one for next month.</div>
+            <div class="no"><b>By payer</b>Batching portal work saves logins, but optimizes for the coordinator's convenience, not the patient.</div>
+            <div class="pick"><b>Risk to the appointment</b>Days until the appointment, combined with what's missing and whose move it is.</div>
+          </div>
+          <div class="dec-w"><p><b>Why</b>The outcome that matters most is a patient's appointment going ahead. Ranking by it puts the cases that can't wait at the top.</p><p><b>Trade-off accepted</b>A ranked list can feel like a black box. So every row says why it's there (for example "Tomorrow 9:30 · missing info"), and the team view keeps date order available.</p></div>
+        </article>
+        <article class="dec">
+          <div class="dec-h"><i>Decision 02</i><h4>How much should the system fill in on its own?</h4></div>
+          <div class="dec-o">
+            <div class="no"><b>Auto-fill and auto-submit</b>Fastest on paper. But a wrong match sent to a payer is a denial with the clinic's name on it.</div>
+            <div class="pick"><b>Suggest, show the source, human confirms</b>Matches come with a link to the exact note; the coordinator confirms each one.</div>
+            <div class="no"><b>Search only</b>Safe, but leaves the hardest part, finding the evidence, as manual as today.</div>
+          </div>
+          <div class="dec-w"><p><b>Why</b>Coordinators are accountable for what gets submitted. Showing the source lets them check a match in seconds instead of re-reading the chart.</p><p><b>Trade-off accepted</b>Slower than full automation. If testing shows match accuracy is very high for some criteria, those could be pre-confirmed later.</p></div>
+        </article>
+        <article class="dec">
+          <div class="dec-h"><i>Decision 03</i><h4>What happens when a required item is missing?</h4></div>
+          <div class="dec-o">
+            <div class="no"><b>Warn and let them submit</b>Respects experience, but warnings get clicked past under pressure.</div>
+            <div class="pick"><b>Hold the submit, explain the cost, offer the fix</b>"Not yet. One required item is missing." The fix, asking the provider, is one click.</div>
+            <div class="no"><b>Message the provider automatically</b>Removes a step, but creates the noise providers already ignore.</div>
+          </div>
+          <div class="dec-w"><p><b>Why</b>A "more information" reply typically costs more days than getting the missing item now. The screen says this in plain words so the hold feels like help, not a block.</p><p><b>Trade-off accepted</b>Experienced coordinators sometimes know a payer won't need an item. Leads can override with a reason, and those overrides feed back into the checklist.</p></div>
+        </article>
+      </div>
+    </section>
+
+    <figure class="spot reveal"><img src="../../assets/images/case-studies/relay/sp.webp" width="2400" height="1350" alt="Close-up of the readiness checklist: payer criteria with matched evidence, a flagged missing item and the readiness gate" loading="lazy"><figcaption><b>Spotlight · The readiness gate</b>The checklist mirrors the payer's own policy, so coordinators see the reviewer's view before they submit.</figcaption></figure>
+
+    <section id="design" class="blk" aria-labelledby="h-design">
+      <p class="tag2">Design</p>
+      <h2 id="h-design" class="x-h">Three screens, three moments in the workflow</h2>
+
+      <div class="int">
+        <p class="tag2 acc">Moment 1 · Start of the day</p>
+        <h3 class="x-h3">A queue that tells you what to do first</h3>
+        <div class="anno" style="grid-template-columns:1fr">
+          <figure><img class="wide" src="../../assets/images/case-studies/relay/r1.webp" width="1440" height="780" alt="Authorization queue with risk summary cards and a ranked table" loading="lazy"></figure>
+          <div class="callouts" style="grid-template-columns:repeat(auto-fit,minmax(220px,1fr))">
+            <div class="callout"><i>A</i><div><b>Risk first</b><span>The red card counts appointments within 48 hours that aren't approved yet. It's the only card styled as urgent.</span></div></div>
+            <div class="callout"><i>B</i><div><b>Readiness at a glance</b><span>A five-step meter shows how many payer criteria are met, without opening the case.</span></div></div>
+            <div class="callout"><i>C</i><div><b>A next action on every row</b><span>"Ask Dr. Patel for symptom duration" instead of a generic status.</span></div></div>
+            <div class="callout"><i>D</i><div><b>Views by whose move it is</b><span>"Waiting on provider" separates work you can do from work you're blocked on.</span></div></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="int">
+        <p class="tag2 acc">Moment 2 · Building a request</p>
+        <h3 class="x-h3">The payer's policy, turned into a checklist</h3>
+        <div class="anno" style="grid-template-columns:1fr">
+          <figure><img class="wide" src="../../assets/images/case-studies/relay/r2.webp" width="1440" height="820" alt="Case detail with payer criteria, matched evidence and a held submit button" loading="lazy"></figure>
+          <div class="callouts" style="grid-template-columns:repeat(auto-fit,minmax(220px,1fr))">
+            <div class="callout"><i>A</i><div><b>Criteria, not form fields</b><span>The list is what the reviewer will check, in the payer's order, with the policy version shown.</span></div></div>
+            <div class="callout"><i>B</i><div><b>Every match shows its source</b><span>"From PT notes · 8 documents", and a label when a suggestion has been confirmed by a person.</span></div></div>
+            <div class="callout"><i>C</i><div><b>Why it's flagged</b><span>"Several months" isn't a duration in weeks, so reviewers reject it. The reason is right on the row.</span></div></div>
+            <div class="callout"><i>D</i><div><b>An ask a provider can answer</b><span>The message is pre-written, specific, and says the appointment time.</span></div></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="int">
+        <p class="tag2 acc">Moment 3 · After a denial</p>
+        <h3 class="x-h3">From payer language to a plan</h3>
+        <div class="anno" style="grid-template-columns:1fr">
+          <figure><img class="wide" src="../../assets/images/case-studies/relay/r3.webp" width="1440" height="900" alt="Denial and appeal screen with a plain-language reason, path options and a drafted letter" loading="lazy"></figure>
+          <div class="callouts" style="grid-template-columns:repeat(auto-fit,minmax(220px,1fr))">
+            <div class="callout"><i>A</i><div><b>Plain language on top</b><span>The payer's exact text is kept underneath, because appeals have to answer it word for word.</span></div></div>
+            <div class="callout"><i>B</i><div><b>What's actually missing</b><span>Here the injections were in an outside record that was never attached. That changes the strategy.</span></div></div>
+            <div class="callout"><i>C</i><div><b>Paths with their cost</b><span>Written appeal, peer-to-peer or reschedule, each with when it's the right call.</span></div></div>
+            <div class="callout"><i>D</i><div><b>A draft that cites evidence</b><span>Highlighted claims link to page numbers. Submission waits for the surgeon's signature.</span></div></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="visual" class="blk" aria-labelledby="h-visual">
+      <p class="tag2">Visual language</p>
+      <h2 id="h-visual" class="x-h">A look that does a job</h2>
+      <p class="x-p">Clinic software is used for eight hours a day, so the interface stays quiet: navy chrome, white work surfaces, and color reserved for meaning. Red appears only when a patient's appointment is at risk.</p>
+      <div class="vl">
+        <div class="vl-pal"><div class="sw"><i style="background:#0d2240"></i><b>Night</b><span>#0d2240</span><small>Navigation, focus</small></div><div class="sw"><i style="background:#2563eb"></i><b>Relay blue</b><span>#2563eb</span><small>Primary actions</small></div><div class="sw"><i style="background:#f5f7fa"></i><b>Surface</b><span>#f5f7fa</span><small>Work areas</small></div><div class="sw"><i style="background:#d92d20"></i><b>Risk</b><span>#d92d20</span><small>Appointment at risk</small></div><div class="sw"><i style="background:#f59e0b"></i><b>Attention</b><span>#f59e0b</span><small>Missing information</small></div><div class="sw"><i style="background:#16a34a"></i><b>Met</b><span>#16a34a</span><small>Criteria met, approved</small></div></div>
+        <div class="vl-type"><p class="label">Typeface</p><p class="ty-big" style="font-family:Inter,sans-serif">Aa</p><p class="ty-name">Inter</p><p class="ty-scale" style="font-family:Inter,sans-serif"><span style="font-size:30px;font-weight:800">Title 30</span><span style="font-size:17px;font-weight:700">Heading 17</span><span style="font-size:14px">Body 14 · the default reading size</span><span style="font-size:12px;color:#667085">Caption 12 · sources and timestamps</span></p><p class="ty-note">Tabular figures for codes, dates and counts; 13px base for dense tables, 22px page titles.</p></div>
+        <div class="vl-cmp" style="font-family:Inter,sans-serif"><p class="label">Components</p><div class="cmp-row"><span class="pl" style="background:#fff1d6;color:#9a5b00">Missing info</span><span class="pl" style="background:#e3efff;color:#1d4ed8">Ready to submit</span><span class="pl" style="background:#efe7ff;color:#6b3fd1">Peer-to-peer</span><span class="pl" style="background:#fde8e8;color:#b42318">Denied</span><span class="pl" style="background:#dcf5e6;color:#137a3e">Approved</span></div>
+<div class="cmp-row"><span class="mt"><i class="f"></i><i class="f"></i><i class="f"></i><i class="w"></i><i></i></span><small>Readiness meter · 3 of 5 criteria</small></div>
+<div class="cmp-row"><span class="srct">▤ From PT notes · 8 documents</span><span class="srct cf">Suggested match · confirmed by you</span></div>
+<div class="cmp-row"><span class="bt" style="background:#2563eb;color:#fff">Ask Dr. Patel</span><span class="bt" style="background:#e4e9f1;color:#98a2b3">Submit to Northstar</span><small>Held state explains itself</small></div></div>
+      </div>
+    </section>
+
+    <section id="edges" class="blk" aria-labelledby="h-edges">
+      <p class="tag2">Edge cases</p>
+      <h2 id="h-edges" class="x-h">Designing for the bad days</h2>
+      <p class="x-p">Workflow tools fail at the edges. These are the cases I designed behavior for before polishing the happy path.</p>
+      <div class="edge">
+        <div><b>The payer's policy changes mid-request</b><p><em>Risk:</em> a request built against old criteria gets denied.</p><p><em>Behavior:</em> open requests show "Policy updated Sep 2026" and re-check the list, highlighting new items.</p></div>
+        <div><b>The provider doesn't reply before the appointment</b><p><em>Risk:</em> the appointment is lost silently.</p><p><em>Behavior:</em> escalation at set times (reminder, then page), and a prompt to warn the patient early.</p></div>
+        <div><b>The evidence is a blurry scanned fax</b><p><em>Risk:</em> text recognition reads it wrong.</p><p><em>Behavior:</em> low-confidence matches are never marked as met; they show as "Check this document".</p></div>
+        <div><b>An urgent case</b><p><em>Risk:</em> standard flow is too slow.</p><p><em>Behavior:</em> marking it urgent pins it to the top and shows the payer's urgent timeframe.</p></div>
+        <div><b>Two coordinators open the same case</b><p><em>Risk:</em> duplicate submissions.</p><p><em>Behavior:</em> a live "Jordan is editing" banner, and submission is locked to one owner.</p></div>
+      </div>
+    </section>
+
+    <section id="validation" class="blk" aria-labelledby="h-validation">
+      <p class="tag2">Validation plan</p>
+      <h2 id="h-validation" class="x-h">How I would find out if I'm wrong</h2>
+      <p class="x-p">The plan tests the riskiest assumptions first and is cheap enough to run in a few weeks. Success criteria are set in advance, so results can't be read generously afterward.</p>
+      <div class="trade">
+        <table>
+          <thead><tr><th scope="col">Question</th><th scope="col">Method</th><th scope="col">Participants</th><th scope="col">We'd keep going if…</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">How do coordinators judge a request "complete" today?</th><td>Contextual inquiry: observe a half-day of real work, then interview</td><td>6–8 coordinators across 3 specialties</td><td>Their mental checklist maps to payer criteria, not just to habit</td></tr>
+            <tr><th scope="row">Can a checklist match an expert's judgment?</th><td>Review 20 past de-identified requests against Relay's checklist</td><td>2 senior coordinators</td><td>They agree with at least 80% of the checklist verdicts</td></tr>
+            <tr><th scope="row">Do people catch a wrong suggested match?</th><td>Task-based usability test with two deliberately wrong matches</td><td>8 coordinators</td><td>At least 7 of 8 catch both before submitting</td></tr>
+            <tr><th scope="row">Does risk ranking change what gets worked first?</th><td>Prioritization exercise: the same 15 cases, sorted by date vs. by Relay</td><td>8 coordinators + 1 clinical lead</td><td>Top 5 choices match the clinical lead more often with Relay's order</td></tr>
+            <tr><th scope="row">Does it reduce "more information" replies?</th><td>8-week pilot in one clinic against its previous 8 weeks</td><td>One clinic team</td><td>A clear drop, with no rise in denials</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section id="metrics" class="blk" aria-labelledby="h-metrics">
+      <p class="tag2">Success metrics</p>
+      <h2 id="h-metrics" class="x-h">What I'd measure after launch</h2>
+      <div class="metrics">
+        <div class="metric ns"><h5>North star</h5><p>Share of requests approved on the first submission</p><p>It captures both completeness and speed, and it's what coordinators already care about.</p></div>
+        <div class="metric"><h5>Leading signals</h5><ul><li>Time from order to submission</li><li>At-risk appointments resolved at least 24 hours before</li><li>Provider asks answered the same day</li></ul></div>
+        <div class="metric"><h5>Guardrails</h5><ul><li>Wrong matches caught before submission</li><li>Provider messages per request (shouldn't rise)</li><li>How often leads override the readiness hold</li></ul></div>
+      </div>
+    </section>
+
+    <section id="reflection" class="blk" aria-labelledby="h-reflection">
+      <p class="tag2">Reflection</p>
+      <h2 id="h-reflection" class="x-h">What this project taught me</h2>
+      <div class="take">
+        <div><b>The hard part isn't the screen</b><p>The concept depends on payer rules becoming structured data. A real team would test that assumption before investing in UI, and the plan puts it first.</p></div>
+        <div><b>Automation needs an owner</b><p>In regulated work, "the system did it" isn't an answer. Designing for confirmation made the tool more trustworthy without making it slower where it counts.</p></div>
+        <div><b>Next I'd talk to coordinators</b><p>Every proto-persona and blueprint row here is a hypothesis. Half a day watching real work would likely change the queue design most.</p></div>
+      </div>
+    </section>
+
+    <section id="src" class="blk" aria-labelledby="h-src" style="padding-bottom:24px">
+      <p class="tag2">Sources</p>
+      <h2 id="h-src" class="x-h" style="font-size:clamp(24px,2.4vw,32px)">References</h2>
+      <ol class="refs">
+        <li><span>American Medical Association, <a href="https://www.ama-assn.org/practice-management/prior-authorization/exhausted-prior-auth-many-patients-abandon-care-ama-survey" target="_blank" rel="noopener">2024 Prior Authorization Physician Survey</a> (1,000 practicing physicians, fielded December 2024).</span></li>
+        <li><span>Centers for Medicare &amp; Medicaid Services, <a href="https://www.cms.gov/newsroom/fact-sheets/cms-interoperability-and-prior-authorization-final-rule-cms-0057-f" target="_blank" rel="noopener">Interoperability and Prior Authorization Final Rule (CMS-0057-F)</a>, January 2024.</span></li>
+      </ol>
+    </section>
+
+  </div>
+</div>
+
+<section class="wrap next-x" aria-label="Next case study">
+  <a class="card-n" href="../tandem-family-caregiving/"><span class="label">Next case study</span><b>Tandem →</b><p>One shared care plan for a family looking after a parent, without double doses or lost handoffs.</p></a>
+  <div class="next-links"><a class="btn" href="../../#projects">All case studies</a><a class="btn btn-ink" href="../../#contact">Get in touch</a></div>
+</section>
+
+</main>
+
+<footer class="footer">
+  <div class="wrap">
+    <div class="foot-top">
+      <div class="foot-brand"><b>Ameya Khodaskar</b><span>UX Researcher &amp; Product Designer</span></div>
+      <nav class="foot-nav" aria-label="Footer">
+        <a href="../../">Home</a><a href="../../#about">About</a><a href="../../#experience">Journey</a><a href="../../#projects">Case studies</a><a href="../../#skills">Skills</a>
+      </nav>
+      <div class="foot-social">
+        <a href="https://www.linkedin.com/in/ameya-khodaskar-071bb1207" target="_blank" rel="noopener" aria-label="LinkedIn"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM3 9.5h4V21H3zM9.5 9.5h3.8v1.6h.06c.53-1 1.83-2.06 3.77-2.06 4.03 0 4.77 2.65 4.77 6.1V21h-4v-5.1c0-1.22-.02-2.78-1.7-2.78-1.7 0-1.96 1.33-1.96 2.7V21h-4z"/></svg></a>
+        <a href="https://medium.com/@khodaskarameya" target="_blank" rel="noopener" aria-label="Medium"><svg viewBox="0 0 24 24" aria-hidden="true"><g fill="currentColor"><ellipse cx="7" cy="12" rx="6" ry="6.2"/><ellipse cx="16.6" cy="12" rx="3" ry="5.8"/><ellipse cx="21.7" cy="12" rx="1.1" ry="5.2"/></g></svg></a>
+        <a href="mailto:khodaskarameya@gmail.com" aria-label="Email"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3.5 7 8.5 6 8.5-6"/></svg></a>
+      </div>
+    </div>
+    <p class="wordmark" aria-hidden="true"><span class="w1">Ameya</span> <span class="w2">Khodaskar</span></p>
+    <div class="foot-bottom">
+      <span class="label">© 2026 Ameya Khodaskar</span>
+      <a class="label" href="#main">Back to top ↑</a>
+    </div>
+  </div>
+</footer>
+
+<div class="grid-overlay" aria-hidden="true"><div class="wrap"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div></div>
+<p class="grid-note" aria-hidden="true">Layout grid on · press G to hide</p>
+
+<script src="../../assets/js/main.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Page not found | Ameya Khodaskar</title>
+<meta name="robots" content="noindex">
+<meta name="description" content="This page doesn't exist. Head back to Ameya Khodaskar's portfolio.">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Anybody:wdth,wght@50..150,500..900&amp;family=Archivo:wdth,wght@62..125,400..800&amp;family=Martian+Mono:wdth,wght@75..112.5,400..600&amp;display=swap">
+<link rel="stylesheet" href="/assets/css/style.css">
+<style>
+  .nf { min-height: 100vh; display: grid; place-items: center; padding: 48px 0; position: relative; }
+  .nf::before {
+    content: ""; position: absolute; inset: 0; z-index: -1;
+    background-image: radial-gradient(circle at 1px 1px, rgba(18, 18, 18, .16) 1.2px, transparent 1.6px);
+    background-size: 24px 24px;
+  }
+  .nf-card {
+    background: var(--card); border: var(--line); border-radius: 22px; box-shadow: var(--shadow-lg);
+    padding: clamp(28px, 5vw, 56px); max-width: 760px;
+  }
+  .nf-title {
+    font-family: var(--display); font-weight: 900; text-transform: uppercase; line-height: .86;
+    font-size: clamp(48px, 9vw, 104px); letter-spacing: -.02em; margin: 18px 0 0;
+  }
+  .nf-title .w { display: block; font-variation-settings: "wdth" 150; }
+  .nf-title .sel { font-size: .74em; margin-top: 28px; }
+  .nf p.copy { margin-top: 40px; font-size: 19px; max-width: 32em; }
+  .nf .hero-cta { margin-top: 28px; }
+</style>
+</head>
+<body>
+<main class="nf">
+  <div class="wrap" style="display:grid;place-items:center">
+    <div class="nf-card">
+      <a class="brand" href="/" aria-label="Ameya Khodaskar, home"><span class="mono-mark" aria-hidden="true">AK</span><span class="label">Ameya Khodaskar</span></a>
+      <h1 class="nf-title"><span class="w">Page</span><span class="sel">not found<span class="handles" aria-hidden="true"><i></i><i></i><i></i><i></i></span></span></h1>
+      <p class="copy">This page doesn't exist or has moved. Head back to the portfolio to see case studies, experience and contact details.</p>
+      <div class="hero-cta">
+        <a class="btn btn-ink" href="/">Back to home</a>
+        <a class="btn" href="/#projects">See case studies</a>
+      </div>
+    </div>
+  </div>
+</main>
+</body>
+</html>

@@ -1,0 +1,355 @@
+<!doctype html>
+<html lang="en" class="no-js">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Clearcharge: AI-assisted card disputes case study | Ameya Khodaskar</title>
+<meta name="description" content="A self-initiated concept: an AI-assisted debit card dispute flow for a digital bank that explains unfamiliar charges, routes problems correctly, drafts the dispute in the customer's words and turns Regulation E timelines into plain promises.">
+<meta name="author" content="Ameya Khodaskar">
+<meta name="theme-color" content="#d42a20">
+<link rel="canonical" href="https://khodaskarameya-hub.github.io/case-studies/clearcharge-card-disputes/">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Ameya Khodaskar">
+<meta property="og:title" content="Clearcharge: AI-assisted card disputes | Ameya Khodaskar">
+<meta property="og:description" content="Fintech and Human-AI interaction: a dispute flow that explains itself and follows the law's timelines.">
+<meta property="og:url" content="https://khodaskarameya-hub.github.io/case-studies/clearcharge-card-disputes/">
+<meta property="og:image" content="https://khodaskarameya-hub.github.io/assets/images/case-studies/clearcharge/kv.webp">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="../../favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="../../apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Anybody:wdth,wght@50..150,500..900&amp;family=Archivo:wdth,wght@62..125,400..800&amp;family=Martian+Mono:wdth,wght@75..112.5,400..600&amp;family=Inter:wght@400;500;600;700&amp;display=swap">
+<link rel="stylesheet" href="../../assets/css/style.css">
+<link rel="stylesheet" href="../../assets/css/case.css">
+<script>document.documentElement.classList.replace('no-js', 'js');</script>
+</head>
+<body class="cs-page acc-mint">
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="topbar">
+  <div class="wrap">
+    <nav class="nav" aria-label="Primary">
+      <a class="brand" href="../../" aria-label="Ameya Khodaskar, home">
+        <span class="mono-mark" aria-hidden="true">AK</span>
+        <span class="brand-name">Ameya Khodaskar<small>UX Researcher &amp; Product Designer</small></span>
+      </a>
+      <ul class="nav-links">
+        <li><a href="../../#about">About</a></li>
+        <li><a href="../../#experience">Journey</a></li>
+        <li><a href="../../#projects">Case studies</a></li>
+        <li><a href="../../#skills">Skills</a></li>
+        <li><a href="../../#contact">Contact</a></li>
+      </ul>
+      <div class="nav-actions">
+        <button class="btn btn-sm grid-toggle" type="button" aria-pressed="false" title="Show the layout grid (shortcut: G)">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M9 3v18M15 3v18"/></svg>
+          <span>Grid</span>
+        </button>
+        <a class="btn btn-sm btn-lemon" href="https://www.linkedin.com/in/ameya-khodaskar-071bb1207" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM3 9.5h4V21H3zM9.5 9.5h3.8v1.6h.06c.53-1 1.83-2.06 3.77-2.06 4.03 0 4.77 2.65 4.77 6.1V21h-4v-5.1c0-1.22-.02-2.78-1.7-2.78-1.7 0-1.96 1.33-1.96 2.7V21h-4z"/></svg>
+          LinkedIn
+        </a>
+        <details class="menu">
+          <summary aria-label="Menu">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+            <span>Menu</span>
+          </summary>
+          <div class="menu-panel">
+            <a href="../../">Home <span>Top</span></a>
+            <a href="../../#about">About <span>Profile</span></a>
+            <a href="../../#experience">Journey <span>Role + study</span></a>
+            <a href="../../#projects">Case studies <span>Six studies</span></a>
+            <a href="../../#skills">Skills <span>Research / design</span></a>
+            <a href="../../#contact">Contact <span>Email + LinkedIn</span></a>
+          </div>
+        </details>
+      </div>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+
+<section class="x-hero" aria-labelledby="cs-title">
+  <div class="wrap">
+    <p class="x-crumbs label"><span class="dot" aria-hidden="true"></span><a href="../../#projects">Case studies</a><span aria-hidden="true">/</span><span>Fintech</span></p>
+    <p class="x-kicker">Fintech · Human-AI interaction · Mobile banking</p>
+    <h1 id="cs-title" class="x-title">Clearcharge</h1>
+    <p class="x-sub">A card dispute flow where the AI <em>explains first</em>, and only files what the customer confirms.</p>
+    <dl class="x-meta">
+      <div><dt>Type</dt><dd>Self-initiated concept</dd></div>
+      <div><dt>My role</dt><dd>Solo: heuristic audit, Human-AI interaction design, UI</dd></div>
+      <div><dt>Platform</dt><dd>Mobile banking app, debit card</dd></div>
+      <div><dt>Methods</dt><dd>Heuristic audit, regulatory requirements mapping, Human-AI guidelines, decision log</dd></div>
+    </dl>
+    <figure class="kv-hero"><img src="../../assets/images/case-studies/clearcharge/kv.webp" width="2400" height="1500" alt="Clearcharge key visual: the charge explanation and dispute status screens on a deep green background, with floating cards" fetchpriority="high"></figure>
+    <p class="x-flag"><b>Concept project</b><span>I didn't test this with customers. The audit is based on common patterns in today's dispute flows, the timelines come from the regulation itself, and the AI behavior follows published Human-AI interaction guidelines (sources at the end). Merchants, amounts and the bank in the screens are fictional. This is a design study, not legal advice.</span></p>
+  </div>
+</section>
+
+<div class="wrap x-layout">
+  <nav class="x-toc" aria-label="On this page">
+    <p>On this page</p>
+    <ol>
+      <li><a href="#overview">Overview</a></li>
+      <li><a href="#audit">Audit</a></li>
+      <li><a href="#rules">Rules as UX</a></li>
+      <li><a href="#principles">AI principles</a></li>
+      <li><a href="#decisions">Decisions</a></li>
+      <li><a href="#design">Design</a></li>
+      <li><a href="#visual">Visual language</a></li>
+      <li><a href="#failures">AI failure modes</a></li>
+      <li><a href="#validation">Validation plan</a></li>
+      <li><a href="#metrics">Metrics</a></li>
+      <li><a href="#reflection">Reflection</a></li>
+    </ol>
+  </nav>
+
+  <div class="x-main">
+
+    <section id="overview" class="blk" aria-labelledby="h-overview">
+      <p class="tag2">Overview</p>
+      <h2 id="h-overview" class="x-h">Long story short</h2>
+      <dl class="rows">
+        <div class="row"><dt>Context</dt><dd>When people see a charge they don't understand, the bank app usually offers one path: "Report a problem." What follows is a form built around the bank's process, not the customer's question.</dd></div>
+        <div class="row"><dt>Problem</dt><dd>Two failures sit on either side of one button. Customers <b>dispute legitimate charges</b> because the merchant name on the statement is unrecognizable. And customers with a <b>real problem</b> fill in jargon-heavy forms with no idea what happens next, or when.</dd></div>
+        <div class="row"><dt>My role</dt><dd><ul><li>Ran a <b>heuristic audit</b> of a typical dispute flow and mapped the <b>regulatory timelines</b> into product requirements.</li><li>Designed the AI's behavior using <b>published Human-AI interaction guidelines</b>: what it explains, what it drafts, and what it never decides.</li><li>Designed the flow, wrote the <b>decision log</b>, failure modes and validation plan.</li></ul></dd></div>
+        <div class="row"><dt>Solution</dt><dd><b>Explain before dispute</b>: the assistant identifies the merchant with visible evidence. If something's wrong, a <b>five-way triage</b> routes it correctly, the AI <b>drafts the dispute in the customer's words</b>, and the status screen turns the law's deadlines into <b>dated promises</b>.</dd></div>
+        <div class="row"><dt>Deliverables</dt><dd>Heuristic audit, rules-to-UX map, AI behavior spec, decision log, 4 high-fidelity screens, failure-mode handling, validation plan and metrics.</dd></div>
+      </dl>
+    </section>
+
+    <section id="audit" class="blk" aria-labelledby="h-audit">
+      <p class="tag2">Heuristic audit</p>
+      <h2 id="h-audit" class="x-h">What a typical dispute flow gets wrong</h2>
+      <p class="x-p">I reviewed the common shape of in-app dispute flows against Nielsen's usability heuristics. The patterns below are generalized rather than tied to one bank, and each one became a requirement.</p>
+      <div class="compare">
+        <table>
+          <thead><tr><th scope="col">Pattern today</th><th scope="col">Heuristic it breaks</th><th scope="col">Effect on the customer</th><th scope="col" class="hl-col">Requirement for Clearcharge</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">Raw merchant descriptor ("SQ *BLUESTN RSTR 8442") with no explanation</th><td>Match between system and the real world</td><td>Can't tell if it's theirs, so they dispute to be safe</td><td class="hl-col">Explain the charge first, with evidence</td></tr>
+            <tr><th scope="row">One "Report a problem" path for fraud and billing errors alike</th><td>Error prevention</td><td>Card frozen for a wrong-amount issue; they lose a working card for nothing</td><td class="hl-col">Triage first; only fraud freezes the card</td></tr>
+            <tr><th scope="row">Form fields named after internal processes ("reason code", "chargeback")</th><td>Recognition rather than recall</td><td>They guess the category, which can route the claim wrongly</td><td class="hl-col">Choices written as what happened to them</td></tr>
+            <tr><th scope="row">Blank free-text box: "Describe the issue"</th><td>Help users recognize, diagnose, recover</td><td>Vague statements that need follow-up</td><td class="hl-col">AI drafts a specific statement from their answers</td></tr>
+            <tr><th scope="row">"We'll be in touch" after submitting</th><td>Visibility of system status</td><td>Anxiety, repeat calls to support</td><td class="hl-col">A dated timeline, including temporary credit</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section id="rules" class="blk" aria-labelledby="h-rules">
+      <p class="tag2">Rules as UX</p>
+      <h2 id="h-rules" class="x-h">The law already sets the timeline, so show it</h2>
+      <p class="x-p">For debit cards, error resolution in the US follows Regulation E<sup class="ref"><a href="#src">1</a></sup>. Its deadlines are promises the bank already has to keep. Most flows hide them. I treated each one as a piece of interface.</p>
+      <div class="trade">
+        <table>
+          <thead><tr><th scope="col">What the rule says (simplified)</th><th scope="col">What it means for design</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">Customers report an error within 60 days of the statement it first appeared on</th><td>Show "You can report this until…" on older transactions, so people don't assume it's too late or wait too long</td></tr>
+            <tr><th scope="row">The bank investigates within 10 business days</th><td>A specific date for a first answer, not "soon"</td></tr>
+            <tr><th scope="row">If it needs longer, it gives provisional credit within those 10 business days, and can take up to 45 days (90 for point-of-sale and some other transfers)</th><td>A card at the top of the status screen: "You'll get $30.00 back as a temporary credit by Nov 18"</td></tr>
+            <tr><th scope="row">The bank reports its decision and explains it</th><td>"We'll explain the reason either way", plus a final date the customer can hold us to</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="x-cap">Simplified for design purposes; a real build would be reviewed by the bank's compliance team.</p>
+    </section>
+
+    <section id="principles" class="blk" aria-labelledby="h-principles">
+      <p class="tag2">AI principles</p>
+      <h2 id="h-principles" class="x-h">What the assistant is allowed to do</h2>
+      <p class="x-p">I based the AI's behavior on Microsoft Research's <i>Guidelines for Human-AI Interaction</i><sup class="ref"><a href="#src">2</a></sup>, choosing the four that matter most when money and trust are involved.</p>
+      <div class="insights">
+        <div class="insight"><span class="n">G1</span><div><h4>Make clear what the system can do</h4><p>The assistant says "probably" and explains merchants. It never says a charge is or isn't fraud.</p><p class="so"><b>On screen:</b> "What this charge probably is", with a "How we know" link.</p></div></div>
+        <div class="insight"><span class="n">G11</span><div><h4>Make clear why the system did what it did</h4><p>Each conclusion is backed by evidence the customer can check: earlier visits, card present, chip read.</p><p class="so"><b>On screen:</b> three bullets of evidence and a source label.</p></div></div>
+        <div class="insight"><span class="n">G9</span><div><h4>Support efficient correction</h4><p>Anything the AI writes is editable before it's sent, and the customer's own words are the default.</p><p class="so"><b>On screen:</b> an "Edit" link on the drafted statement; amounts read from the receipt are shown for checking.</p></div></div>
+        <div class="insight"><span class="n">G8</span><div><h4>Support efficient dismissal</h4><p>If the explanation solves it, one tap ends the flow. If it doesn't, the dispute path is never more than one tap away.</p><p class="so"><b>On screen:</b> "I recognize it now" and "Something's wrong" as equal options.</p></div></div>
+      </div>
+    </section>
+
+    <section id="decisions" class="blk" aria-labelledby="h-decisions">
+      <p class="tag2">Decision log</p>
+      <h2 id="h-decisions" class="x-h">Three choices, and what I gave up</h2>
+      <div class="decide">
+        <article class="dec">
+          <div class="dec-h"><i>Decision 01</i><h4>Should the AI's explanation come before the dispute, or instead of it?</h4></div>
+          <div class="dec-o">
+            <div class="no"><b>Dispute first, AI help later</b>Keeps today's flow. But the customer has already decided before they see the explanation.</div>
+            <div class="pick"><b>Explain first, both paths equal</b>The explanation appears on the transaction itself, and "Something's wrong" sits right beside "I recognize it."</div>
+            <div class="no"><b>AI decides whether a dispute is allowed</b>Would cut unnecessary disputes, but takes away a legal right, and erodes trust the first time it's wrong.</div>
+          </div>
+          <div class="dec-w"><p><b>Why</b>Most of the value is upstream: many confusing charges are resolved by knowing what they are. Equal buttons keep the explanation from becoming a gate.</p><p><b>Trade-off accepted</b>Some customers will dispute anyway. That's their right, and the triage makes those disputes better-formed.</p></div>
+        </article>
+        <article class="dec">
+          <div class="dec-h"><i>Decision 02</i><h4>How should customers describe the problem?</h4></div>
+          <div class="dec-o">
+            <div class="no"><b>Free text, AI classifies</b>Feels natural, but misclassification silently changes what happens to their card.</div>
+            <div class="pick"><b>Five plain choices, each stating its consequence</b>"I didn't make this purchase · we'll freeze ••4417 and send a new card."</div>
+            <div class="no"><b>Bank reason codes</b>Accurate for operations, but unreadable for customers.</div>
+          </div>
+          <div class="dec-w"><p><b>Why</b>The category decides big things (freezing a card, what evidence is needed), so the customer should choose it knowingly. Free text comes later, as the AI-drafted statement they can edit.</p><p><b>Trade-off accepted</b>Five options won't fit every case. Testing would show which "other" cases are common enough to need their own path.</p></div>
+        </article>
+        <article class="dec">
+          <div class="dec-h"><i>Decision 03</i><h4>What should the status screen lead with?</h4></div>
+          <div class="dec-o">
+            <div class="no"><b>Case status label</b>"Investigating" is accurate but doesn't answer the real question.</div>
+            <div class="pick"><b>When the money comes back</b>"You'll get $30.00 back as a temporary credit by Nov 18 while we finish."</div>
+            <div class="no"><b>Full process explainer</b>Complete, but long, and read only by the people who need it least.</div>
+          </div>
+          <div class="dec-w"><p><b>Why</b>For most people, a dispute is about money they need. Leading with a date turns an open-ended wait into a promise.</p><p><b>Trade-off accepted</b>Dates create accountability. If the bank misses one, the customer will notice, which is the point.</p></div>
+        </article>
+      </div>
+    </section>
+
+    <figure class="spot reveal"><img src="../../assets/images/case-studies/clearcharge/sp.webp" width="2400" height="1350" alt="Close-up of the AI explanation card and the drafted dispute statement" loading="lazy"><figcaption><b>Spotlight · AI that is easy to disagree with</b>The assistant hedges, shows its evidence, and drafts only from what the customer said.</figcaption></figure>
+
+    <section id="design" class="blk" aria-labelledby="h-design">
+      <p class="tag2">Design</p>
+      <h2 id="h-design" class="x-h">From "what is this?" to a dated promise</h2>
+      <div class="shots" style="--n:4">
+        <figure><img src="../../assets/images/case-studies/clearcharge/c1.webp" width="780" height="1688" alt="Charge explanation" loading="lazy"><figcaption><b>1 · Explain</b>What the charge probably is, and how we know.</figcaption></figure>
+        <figure><img src="../../assets/images/case-studies/clearcharge/c2.webp" width="780" height="1688" alt="Triage" loading="lazy"><figcaption><b>2 · Triage</b>Five plain choices, each with its consequence.</figcaption></figure>
+        <figure><img src="../../assets/images/case-studies/clearcharge/c3.webp" width="780" height="1688" alt="Review drafted dispute" loading="lazy"><figcaption><b>3 · Review</b>The AI's draft, in the customer's words.</figcaption></figure>
+        <figure><img src="../../assets/images/case-studies/clearcharge/c4.webp" width="780" height="1688" alt="Status" loading="lazy"><figcaption><b>4 · Track</b>Temporary credit and final decision dates.</figcaption></figure>
+      </div>
+
+      <div class="int">
+        <p class="tag2 acc">Closer look · The explanation</p>
+        <h3 class="x-h3">Confidence you can check</h3>
+        <div class="anno">
+          <figure><img class="solo" src="../../assets/images/case-studies/clearcharge/c1.webp" width="780" height="1688" alt="Charge explanation" loading="lazy"></figure>
+          <div class="callouts">
+            <div class="callout"><i>A</i><div><b>The raw descriptor stays visible</b><span>Customers can match it to their statement, so the explanation adds to what they see rather than replacing it.</span></div></div>
+            <div class="callout"><i>B</i><div><b>"Probably", on purpose</b><span>The headline is hedged because the system can be wrong. Overconfident AI is worse than none in money matters.</span></div></div>
+            <div class="callout"><i>C</i><div><b>Evidence the customer can verify</b><span>Previous visits on specific dates, chip read, and a common reason for late posting.</span></div></div>
+            <div class="callout"><i>D</i><div><b>Two equal ways forward</b><span>Same size, same weight. The assistant doesn't nudge toward dropping a claim.</span></div></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="int">
+        <p class="tag2 acc">Closer look · Draft and status</p>
+        <h3 class="x-h3">The AI writes; the customer signs off</h3>
+        <div class="anno flip">
+          <figure><img class="ph" src="../../assets/images/case-studies/clearcharge/c3.webp" width="780" height="1688" alt="Drafted dispute review" loading="lazy"><img class="ph" src="../../assets/images/case-studies/clearcharge/c4.webp" width="780" height="1688" alt="Dispute status" loading="lazy"></figure>
+          <div class="callouts">
+            <div class="callout"><i>A</i><div><b>The math is done for them</b><span>Expected $34.20, charged $64.20, disputing $30.00. Partial disputes keep the rest of the charge out of the claim.</span></div></div>
+            <div class="callout"><i>B</i><div><b>First-person, specific, editable</b><span>The draft reads like the customer wrote it, which makes it easier to check and stronger as evidence.</span></div></div>
+            <div class="callout"><i>C</i><div><b>Reassurance about the card</b><span>"You can still use your card" answers the question people are afraid to ask.</span></div></div>
+            <div class="callout"><i>D</i><div><b>Deadlines as dates</b><span>"By Nov 18" and "no later than Feb 2" come from the regulation's timelines for a point-of-sale purchase.</span></div></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="visual" class="blk" aria-labelledby="h-visual">
+      <p class="tag2">Visual language</p>
+      <h2 id="h-visual" class="x-h">A look that does a job</h2>
+      <p class="x-p">Money needs calm. Deep forest green signals the bank and its promises; violet is reserved for anything the AI generated, so customers can always tell the system's words from facts and from their own.</p>
+      <div class="vl">
+        <div class="vl-pal"><div class="sw"><i style="background:#0b3d2e"></i><b>Forest</b><span>#0b3d2e</span><small>Bank, primary actions</small></div><div class="sw"><i style="background:#0b6b45"></i><b>Mint</b><span>#0b6b45</span><small>Money back, success</small></div><div class="sw"><i style="background:#5137c9"></i><b>AI violet</b><span>#5137c9</span><small>AI-generated content only</small></div><div class="sw"><i style="background:#f4f6f5"></i><b>Mist</b><span>#f4f6f5</span><small>Background</small></div><div class="sw"><i style="background:#8a5300"></i><b>Amber</b><span>#8a5300</span><small>In progress</small></div><div class="sw"><i style="background:#0e1a16"></i><b>Ink</b><span>#0e1a16</span><small>Text</small></div></div>
+        <div class="vl-type"><p class="label">Typeface</p><p class="ty-big" style="font-family:Inter,sans-serif">Aa</p><p class="ty-name">Inter</p><p class="ty-scale" style="font-family:Inter,sans-serif"><span style="font-size:30px;font-weight:800">Title 30</span><span style="font-size:17px;font-weight:700">Heading 17</span><span style="font-size:14px">Body 14 · the default reading size</span><span style="font-size:12px;color:#667085">Caption 12 · sources and timestamps</span></p><p class="ty-note">Amounts at 38px with tight tracking; monospace for raw merchant descriptors so they match the statement.</p></div>
+        <div class="vl-cmp" style="font-family:Inter,sans-serif"><p class="label">Components</p><div class="cmp-row"><span class="ai-tag"><i>✦</i>What this charge probably is</span><span class="pl" style="background:#ece8ff;color:#5137c9">Based on merchant data + your history</span></div>
+<div class="cmp-row"><span class="pl" style="background:#fff0d4;color:#8a5300">Investigating</span><span class="pl" style="background:#d9f2e6;color:#0b6b45">Attached</span><span class="pl" style="background:#eceff0;color:#53605c">Wrong amount</span></div>
+<div class="cmp-row"><span class="desc">SQ *BLUESTN RSTR 8442 NY</span><small>Raw descriptor, kept visible</small></div>
+<div class="cmp-row"><span class="bt" style="background:#0b3d2e;color:#fff;border-radius:14px">I recognize it now</span><span class="bt" style="background:#fff;border:1.5px solid #d6dfdb;border-radius:14px">Something's wrong</span><small>Equal weight, on purpose</small></div></div>
+      </div>
+    </section>
+
+    <section id="failures" class="blk" aria-labelledby="h-failures">
+      <p class="tag2">AI failure modes</p>
+      <h2 id="h-failures" class="x-h">Designing for when the AI is wrong</h2>
+      <p class="x-p">An AI feature is only as good as its worst moment. These are the failures I planned for, and what the interface does in each.</p>
+      <div class="edge">
+        <div><b>It names the wrong merchant</b><p><em>Risk:</em> customer drops a real fraud claim.</p><p><em>Behavior:</em> explanation is always hedged and evidence-led; "Something's wrong" stays equal; fraud signals suppress the explanation entirely.</p></div>
+        <div><b>It can't identify the merchant</b><p><em>Risk:</em> a confident-sounding guess.</p><p><em>Behavior:</em> it says "We don't recognize this merchant" and goes straight to the choices. No guess beats a bad guess.</p></div>
+        <div><b>It misreads the receipt</b><p><em>Risk:</em> the wrong amount is disputed.</p><p><em>Behavior:</em> the read amount is shown for confirmation next to the photo; the customer can type over it.</p></div>
+        <div><b>The draft overstates the claim</b><p><em>Risk:</em> the customer signs something untrue.</p><p><em>Behavior:</em> the draft uses only facts the customer entered, and it can't be sent until they've viewed it.</p></div>
+        <div><b>Real fraud looks like a familiar merchant</b><p><em>Risk:</em> reassurance where there should be alarm.</p><p><em>Behavior:</em> risk signals (new device, unusual location) switch the screen to a security path instead of an explanation.</p></div>
+      </div>
+    </section>
+
+    <section id="validation" class="blk" aria-labelledby="h-validation">
+      <p class="tag2">Validation plan</p>
+      <h2 id="h-validation" class="x-h">How I'd test it</h2>
+      <div class="trade">
+        <table>
+          <thead><tr><th scope="col">Question</th><th scope="col">Method</th><th scope="col">Participants</th><th scope="col">We'd keep going if…</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">Does the explanation help people recognize real charges?</th><td>Unmoderated test: 8 charges, half familiar, with and without explanations</td><td>40 banking customers, split into two groups</td><td>More correct "that's mine" answers, with no rise in missed fraud</td></tr>
+            <tr><th scope="row">Do people over-trust the AI?</th><td>Same test with a few planted wrong explanations</td><td>Same 40</td><td>Most planted errors are challenged rather than accepted</td></tr>
+            <tr><th scope="row">Can people choose the right category?</th><td>Scenario cards: pick the closest option</td><td>15 participants</td><td>At least 85% pick the intended path</td></tr>
+            <tr><th scope="row">Do people feel informed after filing?</th><td>Moderated test of filing and status, then interview</td><td>8 participants who have disputed before</td><td>They can say when they'll get money back without looking</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section id="metrics" class="blk" aria-labelledby="h-metrics">
+      <p class="tag2">Success metrics</p>
+      <h2 id="h-metrics" class="x-h">What I'd measure after launch</h2>
+      <div class="metrics">
+        <div class="metric ns"><h5>North star</h5><p>Share of "what is this?" moments resolved correctly, either recognized or properly disputed</p><p>It rewards clarity in both directions, not just fewer disputes.</p></div>
+        <div class="metric"><h5>Leading signals</h5><ul><li>Disputes later withdrawn as "I recognize it"</li><li>Disputes needing follow-up information</li><li>Support calls about dispute status</li></ul></div>
+        <div class="metric"><h5>Guardrails</h5><ul><li>Fraud reported after an explanation was shown</li><li>Planted-error challenge rate in ongoing audits</li><li>Time from first view to filed dispute</li></ul></div>
+      </div>
+    </section>
+
+    <section id="reflection" class="blk" aria-labelledby="h-reflection">
+      <p class="tag2">Reflection</p>
+      <h2 id="h-reflection" class="x-h">What this project taught me</h2>
+      <div class="take">
+        <div><b>Regulation is a design brief</b><p>Rules usually show up as fine print. Here, the regulation's deadlines became the most reassuring part of the interface.</p></div>
+        <div><b>An AI should be easy to disagree with</b><p>The test for every screen was: if the AI is wrong here, can the customer tell, and is it one tap to say so?</p></div>
+        <div><b>The metric shapes the AI</b><p>Measuring "fewer disputes" would reward talking people out of their rights. Picking the north star was an ethical choice.</p></div>
+      </div>
+    </section>
+
+    <section id="src" class="blk" aria-labelledby="h-src" style="padding-bottom:24px">
+      <p class="tag2">Sources</p>
+      <h2 id="h-src" class="x-h" style="font-size:clamp(24px,2.4vw,32px)">References</h2>
+      <ol class="refs">
+        <li><span>Consumer Financial Protection Bureau, <a href="https://www.consumerfinance.gov/rules-policy/regulations/1005/11/" target="_blank" rel="noopener">Regulation E, 12 CFR 1005.11: Procedures for resolving errors</a>.</span></li>
+        <li><span>Amershi, S. et al., <a href="https://www.microsoft.com/en-us/research/publication/guidelines-for-human-ai-interaction/" target="_blank" rel="noopener">Guidelines for Human-AI Interaction</a>, CHI 2019, Microsoft Research.</span></li>
+        <li><span>Nielsen, J., <a href="https://www.nngroup.com/articles/ten-usability-heuristics/" target="_blank" rel="noopener">10 Usability Heuristics for User Interface Design</a>, Nielsen Norman Group.</span></li>
+      </ol>
+    </section>
+
+  </div>
+</div>
+
+<section class="wrap next-x" aria-label="Next case study">
+  <a class="card-n" href="../groundwork-research-repository/"><span class="label">Next case study</span><b>Groundwork →</b><p>A research repository that stores insights instead of files, and checks what a team already knows before a new study.</p></a>
+  <div class="next-links"><a class="btn" href="../../#projects">All case studies</a><a class="btn btn-ink" href="../../#contact">Get in touch</a></div>
+</section>
+
+</main>
+
+<footer class="footer">
+  <div class="wrap">
+    <div class="foot-top">
+      <div class="foot-brand"><b>Ameya Khodaskar</b><span>UX Researcher &amp; Product Designer</span></div>
+      <nav class="foot-nav" aria-label="Footer">
+        <a href="../../">Home</a><a href="../../#about">About</a><a href="../../#experience">Journey</a><a href="../../#projects">Case studies</a><a href="../../#skills">Skills</a>
+      </nav>
+      <div class="foot-social">
+        <a href="https://www.linkedin.com/in/ameya-khodaskar-071bb1207" target="_blank" rel="noopener" aria-label="LinkedIn"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM3 9.5h4V21H3zM9.5 9.5h3.8v1.6h.06c.53-1 1.83-2.06 3.77-2.06 4.03 0 4.77 2.65 4.77 6.1V21h-4v-5.1c0-1.22-.02-2.78-1.7-2.78-1.7 0-1.96 1.33-1.96 2.7V21h-4z"/></svg></a>
+        <a href="https://medium.com/@khodaskarameya" target="_blank" rel="noopener" aria-label="Medium"><svg viewBox="0 0 24 24" aria-hidden="true"><g fill="currentColor"><ellipse cx="7" cy="12" rx="6" ry="6.2"/><ellipse cx="16.6" cy="12" rx="3" ry="5.8"/><ellipse cx="21.7" cy="12" rx="1.1" ry="5.2"/></g></svg></a>
+        <a href="mailto:khodaskarameya@gmail.com" aria-label="Email"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3.5 7 8.5 6 8.5-6"/></svg></a>
+      </div>
+    </div>
+    <p class="wordmark" aria-hidden="true"><span class="w1">Ameya</span> <span class="w2">Khodaskar</span></p>
+    <div class="foot-bottom">
+      <span class="label">© 2026 Ameya Khodaskar</span>
+      <a class="label" href="#main">Back to top ↑</a>
+    </div>
+  </div>
+</footer>
+
+<div class="grid-overlay" aria-hidden="true"><div class="wrap"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div></div>
+<p class="grid-note" aria-hidden="true">Layout grid on · press G to hide</p>
+
+<script src="../../assets/js/main.js" defer></script>
+</body>
+</html>
